@@ -45,5 +45,3 @@ for note in df.iloc:
     
     html_out = template.render(template_vars)
     HTML(string=html_out).write_pdf(f"report_{note['Constituent Number']}.pdf")
-
-    input('...')
