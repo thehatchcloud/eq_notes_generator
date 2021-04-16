@@ -1,0 +1,8 @@
+# Development stuff
+.DS_Store
+.venv
+.vscode
+
+# Content stuff
+*.xls
+*.pdf

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <div>
+            <img src="https://weasyprint.readthedocs.io/en/stable/_static/logo.svg" />
+            <h1>Lesson Note for {{ First_Name }} {{ Last_or_Org_Name }}, {{ Lesson_Date }}</h1>
+            
+            <table>
+                <tr><td><b>LESSON NOTE:</b> {{ Lesson_Notes }}</td><td><b>SESSION:</b> {{ Term }}</td></tr>
+                <tr><td><b>INSTRUCTOR:</b> {{ Instructor }}</td><td><b>BILLING CODE:</b> {{ Billing_Code }}</td></tr>
+                <tr><td><b>RIDER LEVEL:</b> {{ Rider_Level }}</td><td><b>HORSE:</b> {{ Horse }}</td></tr>
+                <tr><td><b>LEADER:</b> {{ Leader }}</td><td><b>SADDLE:</b> {{ Saddle }}</td></tr>
+                <tr><td><b>SIDE WALKER HOLD:</b> {{ Side_Walker_Hold }}</td><td><b>BRIDLE/REINS:</b> {{ BridleReins }}</td></tr>
+            </table>					
+        </div>
+        <div>
+            <p><b>MOUNT:</b> {{ Mount }}</p>
+            <p><b>DISMOUNT:</b> {{ Dismount }}</p>						
+            <p><b>WARM-UP:</b> {{ Warm_Up }}</p>
+            <p><b>NOTE:</b> {{ Warm_Up_Note }}</p>
+            <p><b>OBJECTIVE:</b> {{ Objective }}</p> 
+            <p><b>NOTE:</b> {{ Objective_Note }}</p>
+            <p><b>PROGRESSION:</b> {{ Progression }}</p>
+            <p><b>NOTE:</b> {{ Progression_Note }}</p>
+            <p><b>COOL-DOWN:</b> {{ Cool_Down }}</p>
+            <p><b>NOTE:</b> {{ Cool_Down_Note }}</p>
+        </div>
+        <div>
+            <p><b>LONG TERM GOAL:</b> {{ Long_Term_Goal }}</p>
+            <p><b>NOTE:</b> {{ Long_Term_Goal_Note }}</p>
+            <p><b>SHORT TERM GOAL #1:</b> {{ Short_Term_Goal_1 }}</p>
+            <p><b>NOTE:</b> {{ Short_Term_Goal_1_Note }}</p>
+            <p><b>SHORT TERM GOAL #2:</b> {{ Short_Term_Goal_2 }}</p>
+            <p><b>NOTE:</b> {{ Short_Term_Goal_2_Note }}</p>
+
+            <p>COMMENTS: {{ Comments }}</p>
+        </div>
+    </body>
+</html>
