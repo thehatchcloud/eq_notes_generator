@@ -1,13 +1,21 @@
+import argparse
 import pandas as pd
 import numpy as np
 
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
 
-env = Environment(loader=FileSystemLoader('.'))
-template = env.get_template('notes_template.html')
+parser = argparse.ArgumentParser()
+parser.add_argument('--report_name', help="The file path and name of the report")
+parser.add_argument('--template_name', help="The name of the report template file.", default="notes_template.html")
 
-df = pd.read_excel("notes.xls", sheet_name="Sheet0")
+
+args = parser.parse_args()
+
+env = Environment(loader=FileSystemLoader('.'))
+template = env.get_template(args.template_name)
+
+df = pd.read_excel(args.report_name, sheet_name="Sheet0")
 
 for note in df.iloc:
     template_vars = {
