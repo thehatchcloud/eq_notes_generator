@@ -52,9 +52,7 @@ for note in df.iloc:
         'Short_Term_Goal_2_Note': note['Short Term Goal 2 Note'],
         'Comments': note['Comments'],
     }
-    print(template_vars)
+    
     html_out = template.render(template_vars)
-    print(html_out)
     output_path = Path(f"C:\\Users\\kahat\\OneDrive\\Documents\\Desktop\\Lesson_Notes\\{note['Lesson Date']}_{note['First Name']}_{note['Last or Org Name']}_lesson_notes.pdf")
     HTML(string=html_out).write_pdf(output_path)
-    input('...')
