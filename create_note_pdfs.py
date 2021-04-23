@@ -2,8 +2,10 @@ import argparse
 import pandas as pd
 import numpy as np
 
+from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--report_name', help="The file path and name of the report")
@@ -50,6 +52,9 @@ for note in df.iloc:
         'Short_Term_Goal_2_Note': note['Short Term Goal 2 Note'],
         'Comments': note['Comments'],
     }
-    
+    print(template_vars)
     html_out = template.render(template_vars)
-    HTML(string=html_out).write_pdf(f"{note['Lesson Date']}_{note['First Name']}_{note['Last or Org Name']}_lesson_notes.pdf")
+    print(html_out)
+    output_path = Path(f"C:\\Users\\kahat\\OneDrive\\Documents\\Desktop\\Lesson_Notes\\{note['Lesson Date']}_{note['First Name']}_{note['Last or Org Name']}_lesson_notes.pdf")
+    HTML(string=html_out).write_pdf(output_path)
+    input('...')
